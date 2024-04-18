@@ -9,8 +9,8 @@ declare namespace ext="http://www.altova.com/xslt-extensions";
 	return <proteina>
 		<nombre>{data($entry/protein/recommendedName/fullName)}</nombre>
 		{
-		for $hostName in $entry/organismHost
-		return <hostName>{data($hostName/name[@type="scientific"])}</hostName>
+			for $hostName in $entry/organismHost 
+			return <hostName>{data($hostName/name[@type="scientific"])}</hostName>
 		}
 	</proteina>
 } </proteinas>
